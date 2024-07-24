@@ -1,0 +1,37 @@
+digraph SkillMatch {
+	Start [label=Start shape=oval]
+	Register [label="User Registration & Profile Creation" shape=rectangle]
+	Login [label="User Login" shape=rectangle]
+	FreelancerProfile [label="Freelancer Profile Management" shape=rectangle]
+	ClientProfile [label="Client Profile Management" shape=rectangle]
+	BrowseProjects [label="Browse Projects" shape=rectangle]
+	PostProject [label="Post Project" shape=rectangle]
+	ProjectMatching [label="Project Matching Algorithm" shape=rectangle]
+	NotifyFreelancers [label="Notification to Freelancers" shape=rectangle]
+	SubmitProposal [label="Submit Proposal" shape=rectangle]
+	ReviewProposals [label="Review Proposals & Select Freelancer" shape=rectangle]
+	ProjectManagement [label="Project Management & Communication" shape=rectangle]
+	MilestoneTracking [label="Milestone Tracking" shape=rectangle]
+	PaymentProcessing [label="Payment Processing" shape=rectangle]
+	ProjectCompletion [label="Project Completion & Approval" shape=rectangle]
+	ReviewRating [label="Review & Rating" shape=rectangle]
+	End [label=End shape=oval]
+	Start -> Register
+	Start -> Login
+	Register -> FreelancerProfile
+	Register -> ClientProfile
+	Login -> FreelancerProfile
+	Login -> ClientProfile
+	FreelancerProfile -> BrowseProjects
+	ClientProfile -> PostProject
+	PostProject -> ProjectMatching
+	ProjectMatching -> NotifyFreelancers
+	NotifyFreelancers -> SubmitProposal
+	SubmitProposal -> ReviewProposals
+	ReviewProposals -> ProjectManagement
+	ProjectManagement -> MilestoneTracking
+	MilestoneTracking -> PaymentProcessing
+	PaymentProcessing -> ProjectCompletion
+	ProjectCompletion -> ReviewRating
+	ReviewRating -> End
+}
